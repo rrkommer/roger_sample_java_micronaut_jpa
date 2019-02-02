@@ -1,0 +1,36 @@
+#---
+micronaut:
+    application:
+        name: rogmn
+
+#---
+datasources.default: {}
+#---
+datasources:
+  default:
+    url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+        
+#jpa:
+#  rogmn:
+#     connection:
+#        driver_class: org.h2.Driver
+#        hibernate:
+#           connection:
+#           url: jdbc:h2:./db/repository
+#           dialect: org.hibernate.dialect.H2Dialect
+#           hbm2ddl:
+#             auto: update
+#           show_sql: true
+jpa: 
+  hibernate:
+    hbm2ddl:
+      auto: update
+    show_sql: true
+
+
+application:
+    max: 50
+
